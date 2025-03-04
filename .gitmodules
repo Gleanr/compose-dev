@@ -1,0 +1,8 @@
+[submodule "gleanrc-client"]
+	path = gleanrc-client
+	url = git@github.com:Gleanr/client.git
+	branch = main
+[submodule "gleanrc-api"]
+	path = gleanrc-api
+	url = git@github.com:Gleanr/api.git
+	branch = main
