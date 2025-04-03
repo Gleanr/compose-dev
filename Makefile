@@ -2,7 +2,7 @@ up:
 	docker compose up
 
 log_api:
-	docker compose up -d && docker container logs -f gleanr-api
+	docker compose up api -d && docker container logs -f gleanr-api
 
 build:
 	docker compose up --build
