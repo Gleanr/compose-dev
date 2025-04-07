@@ -15,7 +15,7 @@ services:
     env_file:
       - .env
     networks:
-      - api_network
+      - gleanr_network
     depends_on:
       - db
     restart: on-failure
@@ -36,6 +36,8 @@ services:
       - VITE_DEV_SERVER_HOST=0.0.0.0
     stdin_open: true
     tty: true
+    networks:
+      - gleanr_network
 
   db:
     image: postgres:17-alpine
@@ -48,10 +50,10 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     networks:
-      - api_network
+      - gleanr_network
 
 volumes:
   db_data:
 
 networks:
-  api_network:
+  gleanr_network:
